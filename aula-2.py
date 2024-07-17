@@ -82,6 +82,15 @@ elif option4 == 'No':
     bar.progress(score)
     st.balloons()
 
+df = pd.DataFrame({
+    'Score': coluna1,
+    'Questions': coluna2
+})
+
+st.write('Score bar chart:')
+
+st.bar_chart(df)
+
 if score >= 75 <=100:
     st.write('Tens good habits :))))))) ')
     st.image('happyemoji.jpg',use_column_width=True)
@@ -91,13 +100,4 @@ elif score >=50 <=74:
 elif score >=0 <=49:
     st.warning('Devias começar a tratar mais de ti :) ')
     st.image('sademoji.png',use_column_width=True)
-
-df = pd.DataFrame({
-    'Score': coluna1,
-    'Questions': coluna2
-})
-
-st.write('Score bar chart:')
-
-st.bar_chart(df)
 
