@@ -97,5 +97,7 @@ df = pd.DataFrame({
     'Questions': coluna2
 })
 
+st.write('Score bar chart:')
+
 st.bar_chart(df)
 
